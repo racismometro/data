@@ -22,10 +22,10 @@ class DataLake():
                 "mongodb://{}:{}@datalake-mzdtn.a.query.mongodb.net/myFirstDatabase?ssl=true&authSource=admin".format(user, password)
         )
 
-        self.__data_lake_input_collection = data_lake_input_client.data_lake.test_tweets
-        self.__data_lake_output_collection = data_lake_output_client.get_database('db').get_collection('collection')
+        self.__data_lake_input_collection = data_lake_input_client.raw_data.test
+        self.__data_lake_output_collection = data_lake_output_client.get_database('raw_data').get_collection('tweets')
 
-    def pour(self, documents: list[dict]):
+    def bulk_insert(self, documents: list[dict]):
         self.__data_lake_input_collection.insert_many(documents)
 
     def find(self, filter: dict = None) -> Cursor:
