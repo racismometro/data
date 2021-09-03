@@ -12,13 +12,14 @@ load_dotenv(os.path.join(BASEDIR, '.env'))
 class DataLake():
 
     def __init__(self):
+        user = urllib.parse.quote(os.getenv('MONGO_USER'))
         password = urllib.parse.quote(os.getenv('MONGO_PASSWORD'))
 
         data_lake_input_client = MongoDBConnector.connect(
-                "mongodb+srv://gustavojardim:{}@datalake.uueh4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority".format(password)
+                "mongodb+srv://{}:{}@datalake.mzdtn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority".format(user, password)
         )
         data_lake_output_client = MongoDBConnector.connect(
-                "mongodb://gustavojardim:{}@racisometrodatalake-uueh4.a.query.mongodb.net/myFirstDatabase?ssl=true&authSource=admin".format(password)
+                "mongodb://{}:{}@datalake-mzdtn.a.query.mongodb.net/myFirstDatabase?ssl=true&authSource=admin".format(user, password)
         )
 
         self.__data_lake_input_collection = data_lake_input_client.data_lake.test_tweets
