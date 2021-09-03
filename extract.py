@@ -37,4 +37,4 @@ def extract(data_lake: DataLake):
 
         documents.append(tweet_json)
         
-    data_lake.pour(documents)
+    data_lake.bulk_insert(documents)
