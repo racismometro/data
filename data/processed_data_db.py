@@ -1,0 +1,3 @@
+class ProcessedDataDB():
+
+    pass
