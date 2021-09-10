@@ -3,11 +3,6 @@ import urllib
 
 from data.mongodb_connector import MongoDBConnector
 from pymongo.cursor import Cursor
-from dotenv import load_dotenv
-
-BASEDIR = os.path.abspath(os.path.dirname(__file__))
-load_dotenv(os.path.join(BASEDIR, '.env'))
-
 
 class DataLake():
 
