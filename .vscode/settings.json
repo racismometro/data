@@ -1,0 +1,12 @@
+{
+    "python.linting.enabled": true,
+    "python.envFile": "${workspaceFolder}/.env",
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/src",
+    },
+    "files.exclude": {
+        "**/*.pyc": {"when": "$(basename).py"}, 
+        "**/__pycache__": true,
+        ".pytest_cache": true
+    },
+}
