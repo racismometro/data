@@ -8,6 +8,7 @@ python-dotenv = "*"
 tweepy = "*"
 pymongo = {extras = ["srv"], version = "*"}
 nltk = "*"
+mock = "*"
 
 [dev-packages]
 

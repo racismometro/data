@@ -4,6 +4,12 @@ import urllib
 from data.mongodb_connector import MongoDBConnector
 from pymongo.cursor import Cursor
 
+from dotenv import load_dotenv
+
+BASEDIR = os.path.abspath("/Users/gustavo.jardim/Thoughtworks/Racisometro/data")
+load_dotenv(os.path.join(BASEDIR, '.env'))
+
+
 class DataLake():
 
     def __init__(self):
