@@ -1,14 +1,18 @@
 from core.tweet_streamer import TweetStreamer
 from mock import patch
-import tweepy
 
+import json
 
-# @patch()
-def test_should_return_exact_data_from_stream():
+@patch('data.data_lake.DataLake')
+def test_should_return_exact_data_from_stream(data_lake_mock):
     raw_data = {
         'text': 'this is a mock tweet',
-        'in_reply_to_status_id': '1223'
+        'in_reply_to_status_id': 1223
     }
-    tweet_streamer = TweetStreamer()
+    raw_data_json = json.dumps(raw_data)
+    
+    tweet_streamer = TweetStreamer(data_lake_mock)
 
-    assert tweet_streamer.on_data(raw_data) == raw_data
+    tweet_streamer.on_data(raw_data_json)
+
+    data_lake_mock.insert.assert_called_with(raw_data)
