@@ -29,6 +29,9 @@ class DataLake():
     def bulk_insert(self, documents: list[dict]):
         self.__data_lake_input_collection.insert_many(documents)
 
+    def insert(self, document: dict):
+        self.__data_lake_input_collection.insert(document)
+
     def find(self, filter: dict = None) -> Cursor:
         return self.__data_lake_output_collection.find(filter)
 
