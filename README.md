@@ -1,7 +1,3 @@
-# Racisometro-Data
-
-[![CircleCI](https://circleci.com/gh/twlabs/Racisometro-Data.svg?style=svg&circle-token=b4a5b5817ae61ea9a3e7b550ecd98bb9ac873cfb)](https://circleci.com/gh/twlabs/Racisometro-Data)
-
 ## Setup steps
 
 - Download python3 from Python website or install with homebrew
