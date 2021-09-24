@@ -11,4 +11,4 @@ if __name__ == "__main__":
 
     stream_listener = tweepy.Stream(auth = twitter_api.auth, listener=tweet_streamer)
 
-    print(stream_listener.filter(track=['racismo']))
+    print(stream_listener.filter(track=['put', 'your filters', 'here']))
