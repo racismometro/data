@@ -1,5 +1,5 @@
-from core.tweet_streamer import TweetStreamer
-from core.twitter_api import TwitterApi
+from data.core.tweet_streamer import TweetStreamer
+from data.core.twitter_api import TwitterApi
 from data.data_lake import DataLake
 
 import tweepy
