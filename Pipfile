@@ -5,12 +5,12 @@ name = "pypi"
 
 [packages]
 python-dotenv = "*"
-tweepy = "*"
 pymongo = {extras = ["srv"], version = "*"}
 nltk = "*"
 mock = "*"
 fastapi = "*"
 uvicorn = "*"
+tweepy = "~=4.0.0"
 
 [dev-packages]
 autopep8 = "*"
