@@ -9,6 +9,8 @@ tweepy = "*"
 pymongo = {extras = ["srv"], version = "*"}
 nltk = "*"
 mock = "*"
+fastapi = "*"
+uvicorn = "*"
 
 [dev-packages]
 autopep8 = "*"
