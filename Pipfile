@@ -11,6 +11,7 @@ mock = "*"
 fastapi = "*"
 uvicorn = "*"
 tweepy = "~=4.0.0"
+configparser = "*"
 
 [dev-packages]
 autopep8 = "*"
