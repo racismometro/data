@@ -13,7 +13,7 @@ router = APIRouter()
 @router.get("/total_incidence_between_dates/start-date={start_date}&end-date={end_date}")
 async def get_total_incidence_between_dates(start_date, end_date):
     if config.getboolean("toggles", "incidence_counter"):
-        total_count = tweet_service.get_total_incidence_between_dates()
+        total_count = tweet_service.get_total_incidence_between_dates(start_date, end_date)
         return {
             "body" : total_count
         }
