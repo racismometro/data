@@ -1,8 +1,8 @@
 import os
 import tweepy
 
-from data.core.twitter_api import TwitterApi
-from data.data_lake import DataLake
+from src.data.core.twitter_api import TwitterApi
+from src.data.data_lake import DataLake
 
 
 class TweetStreamer(tweepy.Stream):

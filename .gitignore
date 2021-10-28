@@ -2,3 +2,5 @@ Pipfile.lock
 *.pyc
 .env
 .DS_Store
+/venv
+.idea/
